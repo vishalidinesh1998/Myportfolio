@@ -2,84 +2,99 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vishali Arumugam - Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vishali | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Typing Animation */
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+    .typing {
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid black;
+      animation: typing 4s steps(30, end) infinite alternate, blink 0.7s step-end infinite;
+    }
+  </style>
 </head>
-<body>
+<body class="bg-gradient-to-br from-purple-200 to-pink-300 min-h-screen flex flex-col">
 
-  <!-- Home Section -->
-  <section class="home">
-    <div class="intro">
-      <h3>Hello, It's Me</h3>
-      <h1>Vishali Arumugam</h1>
-      <h4>And I'm a <span>Software Developer</span></h4>
-      <p>Passionate about backend development and creating innovative solutions in dynamic environments.</p>
-      <div class="social-icons">
-        <a href="https://www.linkedin.com/in/vishali98/"><i class="fa-brands fa-linkedin" style="color: #74C0FC;"></i></a>
-        <a href="https://github.com/"><i class="fa-brands fa-github"></i></a>
-      </div>
-      <a href="#" class="btn">Download CV</a>
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center p-5 bg-white shadow-md sticky top-0 z-10">
+    <h1 class="text-xl font-bold text-purple-700">Vishali</h1>
+    <div class="space-x-4">
+      <a href="#home" class="text-gray-700 hover:text-purple-700">Home</a>
+      <a href="#about" class="text-gray-700 hover:text-purple-700">About</a>
+      <a href="#skills" class="text-gray-700 hover:text-purple-700">Skills</a>
+      <a href="#projects" class="text-gray-700 hover:text-purple-700">Projects</a>
+      <a href="#contact" class="text-gray-700 hover:text-purple-700">Contact</a>
     </div>
-    <div class="profile-pic">
-      <img src="your-photo.png" alt="Vishali Arumugam">
-    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="flex-1 flex flex-col justify-center items-center text-center p-8">
+    <h2 class="text-4xl font-bold text-gray-800 mb-4">Hi, I'm <span class="text-purple-600">Vishali Arumugam</span></h2>
+    <p class="text-2xl text-gray-700 typing w-64">Software Developer</p>
+    <p>Iam Vishali Arumugam, a passionate Software Developer with strong skills in backend development. I have experience working with technologies like C#, Java, Python, and MySQL. I am currently pursuing ECMA to enhance my technical knowledge and skills further. I enjoy solving coding problems, building web applications, and I am committed to continuous learning and delivering high-quality solutions.</p>
   </section>
 
-  <!-- About Me Section -->
-  <section class="about">
-    <div class="about-img">
-      <img src="your-photo.png" alt="About Me">
-    </div>
-    <div class="about-text">
-      <h2>About <span>Me</span></h2>
-      <h4>Software Developer</h4>
-      <p>Dedicated to backend development with strong programming skills in C#, Java, Python, and PHP. I love solving coding problems and creating impactful web solutions.</p>
-      <a href="#contact" class="btn">Contact Me</a>
-    </div>
-  </section>
 
-  <!-- Skills Section -->
-  <section class="services">
-    <h2>My <span>Skills</span></h2>
-    <div class="services-container">
-      <div class="service-box">
-        <h3>Backend Development</h3>
-        <p>Experienced in developing backend solutions using C#.NET and PHP.</p>
-      </div>
-      <div class="service-box">
-        <h3>Web Development</h3>
-        <p>Building responsive websites with HTML, CSS, JavaScript, and Tailwind CSS.</p>
-      </div>
-      <div class="service-box">
-        <h3>Database Management</h3>
-        <p>Proficient in MySQL for backend database development and management.</p>
-      </div>
-    </div>
-  </section>
+ <!-- Skills Section -->
+<section id="skills" class="py-12 px-8 bg-gradient-to-r from-purple-100 to-blue-100 text-center">
+  <h2 class="text-3xl font-bold text-purple-700 mb-10">Skills</h2>
 
-  <!-- Latest Projects Section -->
-  <section class="projects">
-    <h2>Latest <span>Projects</span></h2>
-    <div class="projects-container">
-      <div class="project-box"><img src="project1.png" alt="Project 1"></div>
-      <div class="project-box"><img src="project2.png" alt="Project 2"></div>
-      <div class="project-box"><img src="project3.png" alt="Project 3"></div>
-      <div class="project-box"><img src="project4.png" alt="Project 4"></div>
-      <div class="project-box"><img src="project5.png" alt="Project 5"></div>
-      <div class="project-box"><img src="project6.png" alt="Project 6"></div>
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+    <div class="bg-white p-6 rounded-lg shadow-md hover:scale-105 transition transform">
+      <h3 class="text-xl font-semibold text-purple-600 mb-2">Languages</h3>
+      <p class="text-gray-700">C#, Python, JavaScript, HTML, CSS</p>
     </div>
-  </section>
+    <div class="bg-white p-6 rounded-lg shadow-md hover:scale-105 transition transform">
+      <h3 class="text-xl font-semibold text-purple-600 mb-2">Frameworks & Tools</h3>
+      <p class="text-gray-700">.NET, Visual Studio, Linux, Git Hub</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow-md hover:scale-105 transition transform">
+      <h3 class="text-xl font-semibold text-purple-600 mb-2">Database</h3>
+      <p class="text-gray-700">MySQL</p>
+    </div>
+  </div>
+</section>
 
+<!-- Projects Section -->
+<section id="projects" class="py-12 px-8 bg-white text-center">
+  <h2 class="text-3xl font-bold text-purple-700 mb-10">Projects</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    <div class="bg-gradient-to-br from-purple-200 to-blue-200 p-6 rounded-lg shadow-lg hover:scale-105 transition transform">
+      <h3 class="text-xl font-semibold mb-3 text-gray-800">TripAdvisor Clone</h3>
+      <p class="text-gray-700 mb-4">Built a responsive travel-themed website using HTML and CSS.</p>
+      <a href=" https://vishalidinesh1998.github.io/Traveladvisor-clone/" target="_blank" class="text-purple-700 hover:underline">View Project</a>
+    </div>
+    <div class="bg-gradient-to-br from-purple-200 to-blue-200 p-6 rounded-lg shadow-lg hover:scale-105 transition transform">
+      <h3 class="text-xl font-semibold mb-3 text-gray-800">To-Do List App</h3>
+      <p class="text-gray-700 mb-4">Developed an interactive To-Do application using HTML, CSS, JavaScript.</p>
+      <a href="https://vishalidinesh1998.github.io/Simple-To-do-List/" target="_blank" class="text-purple-700 hover:underline">View Project</a>
+    </div>
+    <div class="bg-gradient-to-br from-purple-200 to-blue-200 p-6 rounded-lg shadow-lg hover:scale-105 transition transform">
+      <h3 class="text-xl font-semibold mb-3 text-gray-800">Greenden Website</h3>
+      <p class="text-gray-700 mb-4">Designed an e-commerce landing page using HTML, Tailwind CSS, JavaScript.</p>
+      <a href="https://vishalidinesh1998.github.io/greenden-tailwind/" target="_blank" class="text-purple-700 hover:underline">View Project</a>
+    </div>
+  </div>
+</section>
   <!-- Contact Me Section -->
-  <section class="contact" id="contact">
+  <section class="contact flex flex-col p-5 m-5" id="contact">
     <h2>Contact <span>Me!</span></h2>
-    <form action="#">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <input type="text" placeholder="Your Phone" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
+    <form action="#" class="flex flex-col gap-5 p-2">
+      <input type="text" placeholder="Your Name" required class="p-2">
+      <input type="email" placeholder="Your Email" required class="p-2">
+      <input type="text" placeholder="Your Phone" required class="p-2">
+      <textarea placeholder="Your Message" required class="p-2"></textarea>
+      <button type="submit" class="btn" class="p-2">Send Message</button>
     </form>
   </section>
 
